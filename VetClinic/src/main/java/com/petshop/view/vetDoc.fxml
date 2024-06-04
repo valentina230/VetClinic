@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="TOP_CENTER" prefHeight="699.0" prefWidth="1105.0" spacing="20.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.petshop.controller.VetDoctorController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="122.0" prefWidth="767.0" style="-fx-background-color: white;">
+         <children>
+            <GridPane prefHeight="74.0" prefWidth="767.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="508.79998779296875" minWidth="10.0" prefWidth="369.0" />
+                  <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="415.79999999999995" minWidth="10.0" prefWidth="339.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label prefHeight="35.0" prefWidth="149.0" text="Veterinarian" textFill="#c40707">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="108.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                     <image>
+                        <Image url="@pictures/Imagen1.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" prefHeight="315.0" prefWidth="708.0" spacing="20.0">
+         <children>
+            <TabPane prefHeight="270.0" prefWidth="1062.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Register">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="241.0" prefWidth="1001.0">
+                           <children>
+                              <GridPane alignment="CENTER" hgap="9.0" layoutX="33.0" layoutY="17.0" prefHeight="206.0" prefWidth="469.0" style="-fx-background-color: white;" vgap="8.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="277.79998779296875" minWidth="10.0" prefWidth="220.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="381.7999725341797" minWidth="10.0" prefWidth="240.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="41.6" minHeight="10.0" prefHeight="31.400006103515622" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="66.59998168945313" minHeight="10.0" prefHeight="27.40000610351563" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="76.4" minHeight="10.0" prefHeight="25.79999389648438" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="76.4" minHeight="10.0" prefHeight="25.79999389648438" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="76.4" minHeight="10.0" prefHeight="25.79999389648438" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="76.4" minHeight="10.0" prefHeight="25.79999389648438" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="95.40001525878907" minHeight="10.0" prefHeight="25.800006103515614" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="95.40001525878907" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TextField fx:id="nameField" prefHeight="31.0" prefWidth="220.0" promptText="Name" GridPane.rowIndex="1" />
+                                    <Button fx:id="registerDoctorBtn" mnemonicParsing="false" onAction="#registerDoctor" style="-fx-background-color: #E74C3C;" text="Register Vet" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Button>
+                                    <TextField fx:id="addressField" promptText="Address" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Info of doctor:" wrappingWidth="159.63788604736328" />
+                                    <Button fx:id="updateBtn" mnemonicParsing="false" onAction="#updateDoctor" prefHeight="26.0" prefWidth="137.0" text="Update" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                    <Button fx:id="cancelBtn" mnemonicParsing="false" onAction="#cancel" text="Cancel" visible="false" GridPane.rowIndex="7" />
+                                    <TextField fx:id="phoneField" prefHeight="25.0" prefWidth="239.0" promptText="Phone" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <CheckBox fx:id="usuarioActivoChk" mnemonicParsing="false" selected="true" text="Usuario activo" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <ComboBox fx:id="specialitationCbx" editable="true" prefHeight="25.0" prefWidth="253.0" promptText="Specialitation" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <ComboBox fx:id="workStatusCbx" editable="true" prefHeight="25.0" prefWidth="253.0" promptText="Status" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <TextField fx:id="lastnameField" layoutX="10.0" layoutY="43.0" prefHeight="25.0" prefWidth="217.0" promptText="LastName" GridPane.rowIndex="2" />
+                                    <TextField fx:id="emailField" layoutX="10.0" layoutY="43.0" prefHeight="25.0" prefWidth="241.0" promptText="Email" GridPane.rowIndex="4" />
+                                    <TextField fx:id="identificationField" layoutX="10.0" layoutY="73.0" prefHeight="25.0" prefWidth="217.0" promptText="Identification" GridPane.rowIndex="3" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </HBox>
+      <HBox prefHeight="23.0" prefWidth="634.0">
+         <children>
+            <Text fill="#bf3838" strokeType="OUTSIDE" strokeWidth="0.0" text="SEARCH:">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="18.0" top="3.0" />
+               </HBox.margin>
+            </Text>
+            <TextField fx:id="searchDocField" onKeyTyped="#filterDoctors" />
+         </children>
+      </HBox>
+      <Accordion prefHeight="27.0" prefWidth="410.0">
+        <panes>
+          <TitledPane animated="false" prefHeight="27.0" prefWidth="388.0" text="Filters">
+               <content>
+                  <GridPane>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <CheckBox fx:id="nameChk" mnemonicParsing="false" text="Name" GridPane.rowIndex="1" />
+                        <CheckBox fx:id="emailChk" mnemonicParsing="false" text="Email" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <CheckBox fx:id="phoneChk" mnemonicParsing="false" text="Phone" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <CheckBox fx:id="specialitationChk" mnemonicParsing="false" text="Specialitation" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <CheckBox fx:id="workingChk" mnemonicParsing="false" text="Working" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </content>
+            </TitledPane>
+        </panes>
+      </Accordion>
+      <TableView fx:id="doctorTable" onMouseReleased="#chargeEditDoctor" prefHeight="182.0" prefWidth="426.0">
+         <columns>
+            <TableColumn fx:id="IdVetDoctorCol" prefWidth="67.0" text="Id Vet" />
+            <TableColumn fx:id="identificationVetCol" prefWidth="106.0" text="Identification" />
+            <TableColumn fx:id="nameVetCol" prefWidth="103.0" text="Name" />
+            <TableColumn fx:id="lastNameVetCol" prefWidth="108.0" text="LastName" />
+            <TableColumn fx:id="emailVetCol" prefWidth="114.0" text="Email" />
+            <TableColumn fx:id="phoneVetCol" prefWidth="119.0" text="Phone" />
+            <TableColumn fx:id="addressVetCol" prefWidth="122.0" text="Address" />
+            <TableColumn fx:id="specialitationVetCol" prefWidth="177.0" text="Specialitation" />
+            <TableColumn fx:id="statusVetCol" prefWidth="148.0" text="Status" />
+         </columns>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </TableView>
+      <Button fx:id="returnBtn" onAction="#goMenu" style="-fx-background-color: #E74C3C;" text="Return" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
